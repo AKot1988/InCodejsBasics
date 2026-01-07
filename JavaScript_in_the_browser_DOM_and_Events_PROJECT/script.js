@@ -13,10 +13,11 @@ function displayedMessage(message, element) {
 // varriables to owerride
 let startNumberInterval = 1;
 let finishNumberInterval = 20;
-let secretNumber = randomInt(startNumberInterval, finishNumberInterval);
+// let secretNumber = randomInt(startNumberInterval, finishNumberInterval);
 let score = finishNumberInterval;
 let highScore = 0;
-const randomNumber = randomInt(startNumberInterval, finishNumberInterval); //number
+let randomNumber = randomInt(startNumberInterval, finishNumberInterval); //number
+console.log(randomNumber);
 
 const messageOption = {
   initial: 'Start guessing...',
@@ -35,6 +36,7 @@ const checkButton = document.querySelector('.check');
 const scoreIndication = document.querySelector('.score');
 const hiScoreIndication = document.querySelector('.highscore');
 const inputNumber = document.querySelector('.guess');
+const number = document.querySelector('.number');
 
 checkButton.addEventListener('click', () => {
   let numberSugestion = Number(inputNumber.value);
@@ -54,6 +56,7 @@ checkButton.addEventListener('click', () => {
       displayedMessage(messageOption.high, messageElement);
       displayedMessage(score, scoreIndication);
     } else if (numberSugestion === randomNumber) {
+      displayedMessage(randomNumber, number);
       displayedMessage(messageOption.correct, messageElement);
       highScore < score
         ? ((highScore = score), displayedMessage(highScore, hiScoreIndication))
@@ -68,7 +71,8 @@ checkButton.addEventListener('click', () => {
 
 againButton.addEventListener('click', () => {
   score = finishNumberInterval;
-  randomInt(startNumberInterval, finishNumberInterval);
+  randomNumber = randomInt(startNumberInterval, finishNumberInterval);
+  displayedMessage('?', number);
   displayedMessage(messageOption.initial, messageElement);
   displayedMessage(score, scoreIndication);
   body.style.backgroundColor = '#222';
