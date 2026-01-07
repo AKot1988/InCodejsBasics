@@ -4,6 +4,9 @@ let modal = document.querySelector('.modal');
 let overlay = document.querySelector('.overlay');
 let closeModalButton = document.querySelector('.close-modal');
 
+//Можна створити фкенкцію.
+//Можна тоглити клас.
+
 showModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     modal.classList.remove('hidden');
