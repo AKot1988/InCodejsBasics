@@ -56,3 +56,8 @@ diceImageElement.src = generateDisePositionImgPath(2, 6).path;
 rollButton.addEventListener('click', () => {
   diceImageElement.src = generateDisePositionImgPath(1, 6);
 });
+
+let shitHappens = () => {
+  console.log('Shit happens');
+};
+shitHappens();
