@@ -54,10 +54,33 @@ restartGame();
 diceImageElement.src = generateDisePositionImgPath(2, 6).path;
 
 rollButton.addEventListener('click', () => {
-  diceImageElement.src = generateDisePositionImgPath(1, 6);
+  let { path, number } = generateDisePositionImgPath(1, 6);
+  diceImageElement.src = path;
+  if (number === 1) {
+    currentScore = 0;
+    document.getElementById(`current--${activePlayer}`).textContent = '0';
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    cnhangeActivePlayerStyles();
+  } else {
+    currentScore += number;
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currentScore;
+  }
 });
-
-let shitHappens = () => {
-  console.log('Shit happens');
-};
-shitHappens();
+holdButton.addEventListener('click', () => {
+  scores[activePlayer] += currentScore;
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scores[activePlayer];
+  if (scores[activePlayer] >= 100) {
+    alert(`Player ${activePlayer + 1} has won the game!`);
+    restartGame();
+  } else {
+    currentScore = 0;
+    document.getElementById(`current--${activePlayer}`).textContent = '0';
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    cnhangeActivePlayerStyles();
+  }
+});
+newGameButton.addEventListener('click', () => {
+  restartGame();
+});
