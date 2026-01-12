@@ -71,7 +71,7 @@ holdButton.addEventListener('click', () => {
   scores[activePlayer] += currentScore;
   document.getElementById(`score--${activePlayer}`).textContent =
     scores[activePlayer];
-  if (scores[activePlayer] >= 100) {
+  if (scores[activePlayer] >= 10) {
     alert(`Player ${activePlayer + 1} has won the game!`);
     restartGame();
   } else {
@@ -84,3 +84,31 @@ holdButton.addEventListener('click', () => {
 newGameButton.addEventListener('click', () => {
   restartGame();
 });
+
+function age(birthYear) {
+  let currDate = new Date().getFullYear();
+  return `${nameFull} is ${currDate - birthYear} years old.`;
+}
+
+const nameFull = 'John Doe';
+console.log(age(1988));
+var firstName = 'Jane';
+// let firstName = 'Jane';
+
+console.log(window);
+console.dir(rollButton);
+
+const kysia = {
+  name: 'Kysia',
+  year: 2010,
+  calcAge: function () {
+    console.log(this);
+    console.log(2024 - this.year);
+  },
+};
+
+kysia.calcAge();
+const f = {};
+f.calcAge = kysia.calcAge;
+f.year = 2015;
+f.calcAge();
