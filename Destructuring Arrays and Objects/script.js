@@ -224,11 +224,11 @@ const books = [
 ];
 
 const [firstBook, secondBook] = books;
-console.log(firstBook);
-console.log(secondBook);
+// console.log(firstBook);
+// console.log(secondBook);
 
 const [, , thirdBook] = books;
-console.log(thirdBook);
+// console.log(thirdBook);
 
 const ratings = [
   ['rating', 4.19],
@@ -236,12 +236,45 @@ const ratings = [
 ];
 
 const [[, rating], [, ratingsCount]] = ratings;
-console.log(rating);
-console.log(ratingsCount);
+// console.log(rating);
+// console.log(ratingsCount);
 
 const ratingStars = [63405, 1808];
 const [fiveStarRatingCount, oneStarRatingCount, threeStarRatingCount = 0] =
   ratingStars;
-console.log(fiveStarRatingCount);
-console.log(oneStarRatingCount);
-console.log(threeStarRatingCount);
+// console.log(fiveStarRatingCount);
+// console.log(oneStarRatingCount);
+// console.log(threeStarRatingCount);
+
+// first
+// const [first] = books;
+// const { title, author, ISBN } = first;
+// second
+const { title, author, ISBN } = books[0];
+// console.log(title, author, ISBN);
+
+const { keywords: tags } = books[0];
+// console.log(tags);
+
+const { language, programmingLanguage = 'unknown' } = books[6];
+//  console.log(language, programmingLanguage);
+
+let bookTitle = 'unknown';
+let bookAuthor = 'unknown';
+({ title: bookTitle, author: bookAuthor } = books[0]);
+// console.log(bookTitle, bookAuthor);
+
+const {
+  thirdParty: {
+    goodreads: { rating: bookRating },
+  },
+} = books[0];
+// console.log(bookRating);
+
+const printBookInfo = ({ title, author, year = 'year unknown' }) => {
+  console.log(`${title} by ${author}. Published in ${year}.`);
+};
+
+printBookInfo(books[0]);
+printBookInfo(books[1]);
+printBookInfo(books[4]);
