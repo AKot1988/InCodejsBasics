@@ -61,6 +61,21 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
+  movements.forEach((movement, index) => {
+    const type = movement > 0 ? 'deposit' : 'withdrawal';
+    const innerHTML = `
+        <div class="movements__row">
+          <div class="movements__type movements__type--${type}}">${index + 1} ${type}</div>
+          <div class="movements__value">${movement}</div>
+        </div>`;
+    containerMovements.insertAdjacentHTML('afterbegin', innerHTML);
+  });
+};
+
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -73,4 +88,50 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+const eurToUsd = 1.1;
+const movementsUSD = movements.map(mov => mov * eurToUsd);
+
+const movementDescritions = movements.map((movement, index) => {
+  return movement > 0
+    ? `Movement ${index + 1}: You deposited ${Math.abs(movement)}`
+    : `Movement ${index + 1}: You withdrew ${Math.abs(movement)}`;
+});
+
+// add new prop to each acc 'userName'
+function generateInitals(accountsArr) {
+  accountsArr.forEach(acc => {
+    acc.userName = acc.owner
+      .split(' ')
+      .map(el => el.slice(0, 1))
+      .join('')
+      .toLowerCase();
+  });
+}
+
+// filter arr by negative\positive values
+function filterNumbers(arrayNumbers, valueType = '+') {
+  return arrayNumbers.filter(number =>
+    valueType === '+' ? number > 0 : number < 0,
+  );
+}
+
+// compute balance function
+function computePrintBalance(arr) {
+  const balance = arr.reduce((acc, number) => {
+    acc += number;
+    return acc;
+  }, 0);
+  labelBalance.textContent = `${balance} EUR`;
+}
+
+computePrintBalance(movements);
+
+function maxMovVal(numbersArray) {
+  return numbersArray.reduce((acc, elem) => {
+    return acc < elem ? (acc = elem) : acc;
+  }, numbersArray[0]);
+}
+
+const maxVal = maxMovVal(movements);
+console.log(maxVal);
 /////////////////////////////////////////////////
