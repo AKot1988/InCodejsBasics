@@ -67,7 +67,7 @@ const displayMovements = function (movements) {
     const type = movement > 0 ? 'deposit' : 'withdrawal';
     const innerHTML = `
         <div class="movements__row">
-          <div class="movements__type movements__type--${type}}">${index + 1} ${type}</div>
+          <div class="movements__type movements__type--${type}">${index + 1} ${type}</div>
           <div class="movements__value">${movement}</div>
         </div>`;
     containerMovements.insertAdjacentHTML('afterbegin', innerHTML);
@@ -108,6 +108,8 @@ function generateInitals(accountsArr) {
   });
 }
 
+generateInitals(accounts);
+
 // filter arr by negative\positive values
 function filterNumbers(arrayNumbers, valueType = '+') {
   return arrayNumbers.filter(number =>
@@ -124,14 +126,56 @@ function computePrintBalance(arr) {
   labelBalance.textContent = `${balance} EUR`;
 }
 
-computePrintBalance(movements);
-
 function maxMovVal(numbersArray) {
   return numbersArray.reduce((acc, elem) => {
     return acc < elem ? (acc = elem) : acc;
   }, numbersArray[0]);
 }
 
-const maxVal = maxMovVal(movements);
-console.log(maxVal);
+function calcDisplaySummary(userData) {
+  const incomes = userData.movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => (acc += mov), 0);
+  labelSumIn.textContent = incomes;
+
+  const out = userData.movements
+    .filter(mov => mov < 0)
+    .reduce((acc, elem) => (acc += elem), 0);
+  labelSumOut.textContent = Math.abs(out);
+
+  const interest = userData.movements
+    .filter(move => move > 0)
+    .map(deposit => (deposit * userData.interestRate) / 100)
+    .filter(interest => interest >= 1)
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}`;
+}
+
+const firstWithDrawal = movements.find(mov => mov < 0);
+
+function findAccount(accounts, name) {
+  const accountData = accounts.find(account => `account.${name}`);
+  return accountData;
+}
+
+let currentAccount;
+btnLogin.addEventListener('click', ev => {
+  ev.preventDefault();
+  currentAccount = accounts.find(
+    account => account.userName === inputLoginUsername.value,
+  );
+  console.log(currentAccount);
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    inputLoginPin.value = inputLoginUsername.value = '';
+    inputLoginPin.blur();
+    // console.log('sucsess');
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+    computePrintBalance(currentAccount.movements);
+    displayMovements(currentAccount.movements);
+    calcDisplaySummary(currentAccount);
+  }
+});
+// inputLoginUsername.addEventListener('click', () => {});
+// inputLoginPin.addEventListener('click', () => {});
+// inputTransferTo.addEventListener('click', () => {});
 /////////////////////////////////////////////////
