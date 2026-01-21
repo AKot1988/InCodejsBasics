@@ -158,7 +158,21 @@ function findAccount(accounts, name) {
   return accountData;
 }
 
+function updateUI(acc) {
+  // Display movements
+  displayMovements(acc.movements);
+
+  // Display balance
+  computePrintBalance(acc.movements);
+
+  // Display summary
+  calcDisplaySummary(acc);
+}
+
 let currentAccount;
+containerApp.style.opacity = 0;
+
+// implement log in / welcome message / display main numbers
 btnLogin.addEventListener('click', ev => {
   ev.preventDefault();
   currentAccount = accounts.find(
@@ -166,6 +180,7 @@ btnLogin.addEventListener('click', ev => {
   );
   console.log(currentAccount);
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    containerApp.style.opacity = 100;
     inputLoginPin.value = inputLoginUsername.value = '';
     inputLoginPin.blur();
     // console.log('sucsess');
@@ -175,5 +190,50 @@ btnLogin.addEventListener('click', ev => {
     calcDisplaySummary(currentAccount);
   }
 });
+
+// implement transfer logic
+
+btnTransfer.addEventListener('click', ev => {
+  ev.preventDefault();
+  currentAccount ? currentAccount : alert('you should log in firstly');
+  const recieverAccount = accounts.find(
+    account => account.userName === inputTransferTo.value,
+  );
+  const amount = Number(inputTransferAmount.value);
+  const currentUserBalance = currentAccount.movements.reduce(
+    (acc, mov) => (acc += mov),
+    0,
+  );
+  amount > currentUserBalance
+    ? alert('Your current balance is low enought')
+    : null;
+  console.log(currentUserBalance);
+  recieverAccount?.movements &&
+  amount > 0 &&
+  amount < currentUserBalance &&
+  currentAccount !== recieverAccount
+    ? (recieverAccount.movements.push(amount),
+      currentAccount.movements.push(amount * -1),
+      updateUI(currentAccount))
+    : null;
+});
+
+// implement close account logic
+btnClose.addEventListener('click', ev => {
+  ev.preventDefault();
+  if (
+    inputCloseUsername.value === currentAccount.userName &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      acc => acc.userName === currentAccount.userName,
+    );
+    accounts.splice(index, 1);
+    inputCloseUsername.value = inputClosePin.value = '';
+    containerApp.style.opacity = 0;
+  }
+});
+// inputCloseUsername;
+// inputClosePin;
 
 /////////////////////////////////////////////////
