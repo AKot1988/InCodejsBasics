@@ -175,7 +175,5 @@ btnLogin.addEventListener('click', ev => {
     calcDisplaySummary(currentAccount);
   }
 });
-// inputLoginUsername.addEventListener('click', () => {});
-// inputLoginPin.addEventListener('click', () => {});
-// inputTransferTo.addEventListener('click', () => {});
+
 /////////////////////////////////////////////////
