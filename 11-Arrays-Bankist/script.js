@@ -218,6 +218,18 @@ btnTransfer.addEventListener('click', ev => {
     : null;
 });
 
+btnLoan.addEventListener('click', ev => {
+  ev.preventDefault();
+  const amount = +inputLoanAmount.value;
+
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    console.log('aproved');
+    currentAccount.movements.push(amount);
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
+
 // implement close account logic
 btnClose.addEventListener('click', ev => {
   ev.preventDefault();
