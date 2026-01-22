@@ -61,9 +61,10 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
-  movements.forEach((movement, index) => {
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  movs.forEach((movement, index) => {
     const type = movement > 0 ? 'deposit' : 'withdrawal';
     const innerHTML = `
         <div class="movements__row">
@@ -171,6 +172,13 @@ function updateUI(acc) {
 
 let currentAccount;
 containerApp.style.opacity = 0;
+
+let sortedState = false;
+btnSort.addEventListener('click', ev => {
+  ev.preventDefault();
+  displayMovements(currentAccount.movements, sortedState);
+  sortedState = !sortedState;
+});
 
 // implement log in / welcome message / display main numbers
 btnLogin.addEventListener('click', ev => {
