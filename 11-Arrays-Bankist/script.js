@@ -170,6 +170,22 @@ function updateUI(acc) {
   calcDisplaySummary(acc);
 }
 
+function startLogOutTimer() {
+  let time = 10;
+
+  const timer = setInterval(() => {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const seconds = String(time % 60).padStart(2, 0);
+    labelTimer.textContent = `${min}:${seconds}`;
+    time--;
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = 'Log in to get started';
+      containerApp.style.opacity = 0;
+    }
+  }, 1000);
+}
+
 let currentAccount;
 containerApp.style.opacity = 0;
 
@@ -196,6 +212,7 @@ btnLogin.addEventListener('click', ev => {
     computePrintBalance(currentAccount.movements);
     displayMovements(currentAccount.movements);
     calcDisplaySummary(currentAccount);
+    startLogOutTimer();
   }
 });
 
