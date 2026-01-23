@@ -232,8 +232,10 @@ btnLoan.addEventListener('click', ev => {
 
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     console.log('aproved');
-    currentAccount.movements.push(amount);
-    updateUI(currentAccount);
+    setTimeout(() => {
+      currentAccount.movements.push(amount);
+      updateUI(currentAccount);
+    }, 3000);
   }
   inputLoanAmount.value = '';
 });
