@@ -12,6 +12,8 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 const navContainer = document.querySelector('.nav');
+const section1 = document.querySelector('#section--1');
+const header = document.querySelector('.header');
 
 const openModal = function (ev) {
   ev.preventDefault();
@@ -90,8 +92,36 @@ const handleFade = function (e) {
     logo.style.opacity = this;
   }
 };
+
+// моммент в тому, що bind створює нову функцію з прив'язаним значенням this, в яке просто потрапляє аргумент - значення опасіті і все!
 navContainer.addEventListener('mouseover', handleFade.bind(0.2));
 navContainer.addEventListener('mouseout', handleFade.bind(1));
+
+// стікі навігація
+// const initCoords = section1.getBoundingClientRect();
+// console.log(initCoords);
+// window.addEventListener('scroll', function (ev) {
+//   if (window.scrollY > initCoords.top) navContainer.classList.add('sticky');
+//   else navContainer.classList.remove('sticky');
+// });
+
+// але тут якась ерунда тіпа інтерсекшн обсервера краще юзати
+
+// хедер як елемент я оголосив вище разом з іншими константами]
+
+const stikyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) navContainer.classList.add('sticky');
+  else navContainer.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(stikyNav, {
+  root: null,
+  threshold: 0,
+});
+
+headerObserver.observe(header);
 
 // const h1 = document.querySelector('h1');
 // const alertH1 = function (e) {
