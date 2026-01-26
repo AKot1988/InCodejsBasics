@@ -8,6 +8,10 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+const navContainer = document.querySelector('.nav');
 
 const openModal = function (ev) {
   ev.preventDefault();
@@ -43,7 +47,67 @@ btnScrollTo.addEventListener('click', function (e) {
     top: s1coords.top + window.pageYOffset,
     behavior: 'smooth',
   });
-  // console.log(btnScrollTo.getBoundingClientRect());
-  // console.log(e.target.getBoundingClientRect());
-  // console.log(e.currentTarget.getBoundingClientRect());
 });
+
+// табси з контентом
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+
+  // нижче перевіряю чи парент з класом operations__tab існує (тоді я клікнув саме на тав)
+  if (!clicked) return;
+  // знімаю у всіх табів активний клас і додаю його тільки на той, на який клікнув
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  clicked.classList.add('operations__tab--active');
+
+  // активую контент відповідного табу
+  tabsContent.forEach(cont =>
+    cont.classList.remove('operations__content--active'),
+  );
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
+
+// фейд меню
+
+const handleFade = function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+navContainer.addEventListener('mouseover', handleFade.bind(0.2));
+navContainer.addEventListener('mouseout', handleFade.bind(1));
+
+// const h1 = document.querySelector('h1');
+// const alertH1 = function (e) {
+//   alert('You are reading the heading :D');
+// };
+// h1.addEventListener('mouseenter', alertH1);
+// setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// directly added event listener to common parent element
+
+// document.querySelectorAll('.nav__link').forEach((ev) => {
+//   ev.addEventListener('click', function (el) {
+//     el.addEventListener('click', function (e) {
+//       e.preventDefault();
+//       const id = this.getAttribute('href');
+//       document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//     })
+//   }
+// });
