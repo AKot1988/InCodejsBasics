@@ -111,7 +111,6 @@ navContainer.addEventListener('mouseout', handleFade.bind(1));
 
 const stikyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) navContainer.classList.add('sticky');
   else navContainer.classList.remove('sticky');
 };
@@ -122,6 +121,32 @@ const headerObserver = new IntersectionObserver(stikyNav, {
 });
 
 headerObserver.observe(header);
+
+// observer API ti hide\show sections!!!
+// Насправді - це кунгФу!
+
+// вибираємо всі секції на сторінці
+const allSections = document.querySelectorAll('.section');
+
+// Створюємо функцію, яка буде викликатися, коли спостерігач помітить перетин цільового елемента з вьюпортом
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+// створюємо спостерігача з вказаною функцією зворотного виклику та параметрами
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.2,
+});
+// console.log(allSections);
+
+// додаємо клас приховування до всіх секцій та починаємо спостереження за кожною секцією
+allSections.forEach(function (section) {
+  section.classList.add('section--hidden');
+  sectionObserver.observe(section);
+});
 
 // const h1 = document.querySelector('h1');
 // const alertH1 = function (e) {
