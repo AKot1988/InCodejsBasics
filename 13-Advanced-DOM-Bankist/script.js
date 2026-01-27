@@ -171,37 +171,79 @@ const lazyImgObserver = new IntersectionObserver(loadImg, {
 images.forEach(img => lazyImgObserver.observe(img));
 
 //slider component
-const slides = document.querySelectorAll('.slide');
-const btnLeft = document.querySelector('.slider__btn--left');
-const btnRight = document.querySelector('.slider__btn--right');
-const slider = document.querySelector('.slider');
+const slider = function () {
+  const slides = document.querySelectorAll('.slide');
+  const btnLeft = document.querySelector('.slider__btn--left');
+  const btnRight = document.querySelector('.slider__btn--right');
+  const slider = document.querySelector('.slider');
+  const dotsContainer = document.querySelector('.dots');
 
-const goToSlide = function (slide) {
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`),
-  );
-};
+  const createDots = function () {
+    slides.forEach((_, i) => {
+      dotsContainer.insertAdjacentHTML(
+        'beforeend',
+        `<button class="dots__dot" data-slide="${i}"></button>`,
+      );
+    });
+  };
 
-let currentSlide = 0;
-goToSlide(currentSlide);
-// nextSlide
-const nextSlide = function () {
-  currentSlide++;
+  createDots();
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach(dot => dot.classList.remove('dots__dot--active'));
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active');
+  };
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`),
+    );
+  };
+
+  let currentSlide = 0;
   goToSlide(currentSlide);
-  if (currentSlide === slides.length - 1) currentSlide = -1;
-};
-// prevSlide
-const prevSlide = function () {
-  if (currentSlide > 0) {
-    currentSlide--;
-  } else currentSlide = slides.length - 1;
+  // nextSlide
+  const nextSlide = function () {
+    currentSlide++;
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+    if (currentSlide === slides.length - 1) currentSlide = -1;
+  };
+  // prevSlide
+  const prevSlide = function () {
+    if (currentSlide > 0) {
+      currentSlide--;
+    } else currentSlide = slides.length - 1;
 
-  goToSlide(currentSlide);
-  if (currentSlide === 0) currentSlide = slides.length;
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+    if (currentSlide === 0) currentSlide = slides.length;
+  };
+
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+  });
+
+  dotsContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots__dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
 };
 
-btnRight.addEventListener('click', nextSlide);
-btnLeft.addEventListener('click', prevSlide);
+slider();
+
+///////////////////////////////////////
 
 // const h1 = document.querySelector('h1');
 // const alertH1 = function (e) {
