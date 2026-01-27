@@ -118,7 +118,7 @@ const stikyNav = function (entries) {
 
 const headerObserver = new IntersectionObserver(stikyNav, {
   root: null,
-  threshold: 0,
+  threshold: 0.1,
 });
 
 headerObserver.observe(header);
