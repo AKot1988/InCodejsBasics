@@ -170,6 +170,39 @@ const lazyImgObserver = new IntersectionObserver(loadImg, {
 
 images.forEach(img => lazyImgObserver.observe(img));
 
+//slider component
+const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+const slider = document.querySelector('.slider');
+
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`),
+  );
+};
+
+let currentSlide = 0;
+goToSlide(currentSlide);
+// nextSlide
+const nextSlide = function () {
+  currentSlide++;
+  goToSlide(currentSlide);
+  if (currentSlide === slides.length - 1) currentSlide = -1;
+};
+// prevSlide
+const prevSlide = function () {
+  if (currentSlide > 0) {
+    currentSlide--;
+  } else currentSlide = slides.length - 1;
+
+  goToSlide(currentSlide);
+  if (currentSlide === 0) currentSlide = slides.length;
+};
+
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);
+
 // const h1 = document.querySelector('h1');
 // const alertH1 = function (e) {
 //   alert('You are reading the heading :D');
