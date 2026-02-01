@@ -1,27 +1,27 @@
 'use strict';
 
 // --------------------------------------First challenge--------------------------------------
-const Car = function (brand, speed) {
-  this.brand = brand;
-  this.speed = speed;
-};
+// const Car = function (brand, speed) {
+//   this.brand = brand;
+//   this.speed = speed;
+// };
 
-Car.prototype.accelerate = function () {
-  this.speed += 10;
-  console.log(`${this.brand} is going at ${this.speed} km/h`);
-};
+// Car.prototype.accelerate = function () {
+//   this.speed += 10;
+//   console.log(`${this.brand} is going at ${this.speed} km/h`);
+// };
 
-Car.prototype.brake = function () {
-  this.speed -= 5;
-  console.log(`${this.brand} is going at ${this.speed} km/h`);
-};
+// Car.prototype.brake = function () {
+//   this.speed -= 5;
+//   console.log(`${this.brand} is going at ${this.speed} km/h`);
+// };
 
-const bmw = new Car('BMW', 120);
-bmw.accelerate();
-bmw.brake();
+// const bmw = new Car('BMW', 120);
+// bmw.accelerate();
+// bmw.brake();
 
-const mercedes = new Car('Mercedes', 95);
-mercedes.accelerate();
+// const mercedes = new Car('Mercedes', 95);
+// mercedes.accelerate();
 
 // --------------------------------------Second challenge--------------------------
 class CarCl {
@@ -50,34 +50,34 @@ class CarCl {
 
 // --------------------------------------Third challenge--------------------------
 
-// First option
-const EV = function (make, speed, charge) {
-  Car.call(this, make, speed);
-  this.charge = charge;
-};
-EV.prototype = Object.create(Car.prototype);
+// // First option
+// const EV = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
+// };
+// EV.prototype = Object.create(Car.prototype);
 
-EV.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-};
-const tesla = new EV('Tesla', 120, 23);
-tesla.chargeBattery(90);
-console.log(tesla);
-tesla.brake();
+// EV.prototype.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
+// const tesla = new EV('Tesla', 120, 23);
+// tesla.chargeBattery(90);
+// console.log(tesla);
+// tesla.brake();
 
-EV.prototype.accelerate = function () {
-  this.speed += 20;
-  this.charge--;
-  console.log(
-    `${this.brand} is going at ${this.speed} km/h, with a charge of ${this.charge}%`,
-  );
-};
+// EV.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge--;
+//   console.log(
+//     `${this.brand} is going at ${this.speed} km/h, with a charge of ${this.charge}%`,
+//   );
+// };
 
-tesla.chargeBattery(90);
-console.log(tesla);
-tesla.brake();
-tesla.accelerate();
-console.log(tesla);
+// tesla.chargeBattery(90);
+// console.log(tesla);
+// tesla.brake();
+// tesla.accelerate();
+// console.log(tesla);
 
 // second option
 // const EV = class extends CarCl {
@@ -92,3 +92,38 @@ console.log(tesla);
 // const tesla = new EV('Tesla', 120, 23);
 // tesla.chargeBattery(90);
 // console.log(tesla);
+
+// --------------------------------------Fourth challenge--------------------------
+
+class EVCl extends CarCl {
+  #charge;
+  constructor(brand, speed, charge) {
+    super(brand, speed);
+    this.#charge = charge;
+  }
+
+  chargeTo(chargeTo) {
+    this.#charge = chargeTo;
+    return this;
+  }
+
+  accelerate() {
+    this.speed += 20;
+    this.#charge--;
+    console.log(
+      `${this.brand} is going at ${this.speed} km/h, with a charge of ${this.#charge}%`,
+    );
+    return this;
+  }
+
+  brake() {
+    this.speed -= 5;
+    console.log(`${this.brand} is going at ${this.speed} km/h`);
+    return this;
+  }
+}
+const Rivian = new EVCl('Rivian', 150, 90);
+Rivian.chargeTo(91).brake().accelerate().accelerate().accelerate();
+console.log(Rivian.speedUS);
+Rivian.speedUS = 250;
+console.log(Rivian);
