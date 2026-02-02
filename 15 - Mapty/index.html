@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="style.css" />
 
+    <title>mapty // Map your workouts</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -24,9 +25,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
-
-    <script defer src="script.js" type="module"></script>
-    <title>mapty // Map your workouts</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="sidebar">
@@ -36,18 +35,23 @@
         <form class="form hidden">
           <div class="form__row">
             <label class="form__label">Type</label>
-            <select class="form__input form__input--type">
+            <select name="type" class="form__input form__input--type">
               <option value="running">Running</option>
               <option value="cycling">Cycling</option>
             </select>
           </div>
           <div class="form__row">
             <label class="form__label">Distance</label>
-            <input class="form__input form__input--distance" placeholder="km" />
+            <input
+              name="distance"
+              class="form__input form__input--distance"
+              placeholder="km"
+            />
           </div>
           <div class="form__row">
             <label class="form__label">Duration</label>
             <input
+              name="duration"
               class="form__input form__input--duration"
               placeholder="min"
             />
@@ -55,6 +59,7 @@
           <div class="form__row">
             <label class="form__label">Cadence</label>
             <input
+              name="cadence"
               class="form__input form__input--cadence"
               placeholder="step/min"
             />
@@ -62,6 +67,7 @@
           <div class="form__row form__row--hidden">
             <label class="form__label">Elev Gain</label>
             <input
+              name="elevation"
               class="form__input form__input--elevation"
               placeholder="meters"
             />
