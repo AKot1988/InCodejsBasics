@@ -30,7 +30,7 @@ class Running extends Workout {
     super(coords, distance, duration);
     this.cadence = cadence;
     this.calcPace();
-    this.description = this._setDescription();
+    this._setDescription();
   }
   calcPace() {
     this.pace = this.duration / this.distance;
@@ -44,7 +44,7 @@ class Cycling extends Workout {
     super(coords, distance, duration);
     this.elevationGain = elevationGain;
     this.calcSpeed();
-    this.description = this._setDescription();
+    this._setDescription();
   }
   calcSpeed() {
     this.speed = this.distance / (this.duration / 60);
@@ -82,15 +82,17 @@ class App {
       console.log('Немає збережених тренувань');
     }
   }
-
   _setWorkoutsToLS() {
     localStorage.setItem('workouts', JSON.stringify(this.#workouts));
   }
-
   _loadMap(position) {
     const { latitude, longitude } = position.coords;
     const coords = [latitude, longitude];
-    this.#workouts = this._getWorkoutsLS();
+    // this.#workouts = this._getWorkoutsLS();
+    // this.#workouts.forEach(workout => {
+    //   this._renderWorkout(workout);
+    //   this._renderWorkoutMarker(workout);
+    // });
 
     this.#map = L.map('map').setView(coords, 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -99,6 +101,13 @@ class App {
     }).addTo(this.#map);
 
     this.#map.on('click', this._showForm.bind(this));
+
+    this.#workouts = this._getWorkoutsLS();
+    this.#workouts.forEach(workout => {
+      console.log(this);
+      this._renderWorkout(workout);
+      this._renderWorkoutMarker(workout);
+    });
   }
   _newWorkout(e) {
     e.preventDefault();
