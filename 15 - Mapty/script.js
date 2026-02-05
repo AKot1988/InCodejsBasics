@@ -61,6 +61,10 @@ class App {
     this._getPosition();
     this._toggleElevationField();
     form.addEventListener('submit', this._newWorkout.bind(this));
+    containerWorkouts.addEventListener(
+      'click',
+      this._recenterMapToClikedWorkout.bind(this),
+    );
   }
   _getPosition() {
     if (navigator.geolocation) {
@@ -103,8 +107,8 @@ class App {
     this.#map.on('click', this._showForm.bind(this));
 
     this.#workouts = this._getWorkoutsLS();
+    Array.isArray(this.#workouts) ? this.#workouts : (this.#workouts = []);
     this.#workouts.forEach(workout => {
-      console.log(this);
       this._renderWorkout(workout);
       this._renderWorkoutMarker(workout);
     });
@@ -183,7 +187,7 @@ class App {
           className: `${workout.type}-popup`,
         }),
       )
-      .setPopupContent(`${workout.type}`)
+      .setPopupContent(`${workout.description}`)
       .openPopup();
   }
   _renderWorkout(workout) {
@@ -225,6 +229,14 @@ class App {
           </div>
         </li>`;
     form.insertAdjacentHTML('afterend', html);
+  }
+  _recenterMapToClikedWorkout(e) {
+    const wokOutEl = e.target.closest('.workout');
+    const clikedWorkOut = this.#workouts.find(
+      workout => workout.id === wokOutEl.dataset.id,
+    );
+    console.log(clikedWorkOut);
+    this.#map.setView(clikedWorkOut.coords);
   }
 }
 
