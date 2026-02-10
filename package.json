@@ -1,0 +1,20 @@
+{
+  "name": "incodejsbasics",
+  "version": "1.0.0",
+  "description": "node -v",
+  "homepage": "https://github.com/AKot1988/InCodejsBasics#readme",
+  "bugs": {
+    "url": "https://github.com/AKot1988/InCodejsBasics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKot1988/InCodejsBasics.git"
+  },
+  "license": "ISC",
+  "author": "AKot",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  }
+}

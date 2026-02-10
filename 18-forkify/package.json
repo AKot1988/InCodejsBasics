@@ -1,0 +1,12 @@
+{
+  "name": "18-forkify",
+  "version": "1.0.0",
+  "description": "Final project",
+  "license": "ISC",
+  "author": "Akot",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  }
+}
