@@ -5,8 +5,15 @@
   "license": "ISC",
   "author": "Akot",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "test": "dev"
+    "test": "dev",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "parcel": "^2.16.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4"
   }
 }
