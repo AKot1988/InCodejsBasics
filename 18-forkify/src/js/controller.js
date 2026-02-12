@@ -1,7 +1,7 @@
 import icons from 'url:../img/icons.svg'; // Parcel 2
-import recipeView from './views/recipeView.js';
 import * as model from './model.js';
 import { state } from './model.js';
+import recipeView from './views/recipeView.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 // import { has } from 'core-js/core/dict';
@@ -21,24 +21,16 @@ import 'regenerator-runtime/runtime';
 if (!state.recipyParentElement) {
   state.recipyParentElement = document.querySelector('.recipe');
 }
-function renderSpinner(parentEl) {
-  const markup = `
-        <div class="spinner">
-          <svg>
-            <use href="${icons}#icon-loader"></use>
-          </svg>
-        </div>`;
-  state.recipyParentElement.innerHTML = '';
-  state.recipyParentElement.insertAdjacentHTML('afterbegin', markup);
-}
+// console.log(state.recipyParentElement);
 
-const showRecipe = async function () {
+const controlRecipies = async function () {
   try {
     const id = window.location.hash.slice(1);
-    await model.loadRecipe(id);
-    recipeView.render(state.recipe);
     if (!id) return;
-    renderSpinner(recipeContainer);
+    recipeView.renderSpinner();
+    await model.loadRecipe(id);
+    ``;
+    recipeView.render(state.recipe);
 
     if (!res.ok) {
       throw new Error(`${data.message} (${res.status})`);
@@ -51,4 +43,6 @@ const showRecipe = async function () {
   }
 };
 
-['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+['hashchange', 'load'].forEach(ev =>
+  window.addEventListener(ev, controlRecipies),
+);
