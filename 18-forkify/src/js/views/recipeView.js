@@ -1,6 +1,10 @@
 import icons from 'url:../../img/icons.svg';
 import { state } from '../model';
-console.log(state);
+import { Fraction } from '../../utils/fraction.js';
+
+const qty = 2.5;
+const frac = new Fraction(qty);
+console.log(frac.toString()); // "5/2"
 
 export class RecipeView {
   #parentElement = document.querySelector('.recipe');
