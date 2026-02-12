@@ -20,6 +20,11 @@ export class Fraction {
       if (minError < tolerance) break;
     }
 
-    return `${numerator}/${denominator}`;
+    const whole = Math.floor(numerator / denominator);
+    const remainder = numerator % denominator;
+
+    if (remainder === 0) return `${whole}`; // чисте число
+    if (whole === 0) return `${remainder}/${denominator}`; // менше 1
+    return `${whole} ${remainder}/${denominator}`; // змішане число
   }
 }
