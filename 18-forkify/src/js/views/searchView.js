@@ -1,22 +1,17 @@
 import * as model from '../model.js';
+import View from './View.js';
 
-class SearchView {
-  #parentEl = document.querySelector('.search');
-
-  #clearInput() {
-    this.#parentEl.querySelector('.search__field').value = '';
-  }
+class SearchView extends View {
+  _parentElement = document.querySelector('.search__field');
 
   getQuery() {
-    model.state.search.query =
-      this.#parentEl.querySelector('.search__field').value;
-    // const query = this.#parentEl.querySelector('.search__field').value;
-    this.#clearInput();
-    // return query;
+    model.state.search.query = this._parentElement.value;
+    console.log(model.state.search.query);
+    this._clear();
   }
 
   addHandlerSearch(handler) {
-    this.#parentEl.addEventListener('submit', e => {
+    this._parentElement.closest('.search').addEventListener('submit', e => {
       e.preventDefault();
       this.getQuery();
       handler();

@@ -10,9 +10,9 @@ import 'regenerator-runtime/runtime';
 // https://forkify-api.jonas.io
 
 ///////////////////////////////////////
-if (!model.state.recipyParentElement) {
-  model.state.recipyParentElement = document.querySelector('.recipe');
-}
+// if (!model.state.recipyParentElement) {
+//   model.state.recipyParentElement = document.querySelector('.recipe');
+// }
 // console.log(state.recipyParentElement);
 
 const controlRecipies = async function () {
