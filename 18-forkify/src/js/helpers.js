@@ -14,7 +14,6 @@ export const GET_JSON = async function (url, id) {
       timeout(TIMEOUT_SEC),
     ]);
     const data = await res.json();
-    console.log(data);
     if (!res.ok) {
       throw new Error(`${data.message} (${res.status})`);
     }

@@ -1,12 +1,15 @@
 import { async } from 'regenerator-runtime';
 import { API_URL } from './config.js';
 import { GET_JSON } from './helpers.js';
+import { PAGE, RES_PER_PAGE } from './config.js';
 export const state = {
   recipe: {},
   recipyParentElement: null,
   search: {
     query: '',
     results: [],
+    resultsPerPage: RES_PER_PAGE,
+    currentPage: PAGE,
   },
 };
 
@@ -40,12 +43,18 @@ export const loadSearchResults = async function () {
         image: rec.image_url,
       };
     });
-    console.log(state.search);
   } catch (err) {
     console.error(`${err} 💥💥💥`);
     throw err;
   }
 };
+
+export function getSearchResltsPage(page = state.search.currentPage) {
+  state.search.currentPage = page;
+  const start = (page - 1) * state.search.resultsPerPage;
+  const end = page * state.search.resultsPerPage;
+  return state.search.results.slice(start, end);
+}
 
 // loadSearchResults('pasta');
 

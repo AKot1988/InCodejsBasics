@@ -3,9 +3,9 @@ import icons from 'url:../../img/icons.svg';
 export default class View {
   _data;
   render(data) {
-    if (!this._data || (!Array.isArray(data) && data.length === 0))
-      return this.renderError();
     this._data = data;
+    if (!this._data || (!Array.isArray(this._data) && this._data.length === 0))
+      return this.renderError();
     const markup = this._generateMarkup();
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
