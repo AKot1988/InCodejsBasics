@@ -56,6 +56,13 @@ export function getSearchResltsPage(page = state.search.currentPage) {
   return state.search.results.slice(start, end);
 }
 
+export const updateServings = function (newServings) {
+  state.recipe.ingredients.forEach(ing => {
+    ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
+    state.recipe.servings = newServings;
+  });
+};
+
 // loadSearchResults('pasta');
 
 // https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886
