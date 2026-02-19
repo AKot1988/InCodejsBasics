@@ -5,7 +5,6 @@ import { Fraction } from '../../utils/fraction.js';
 
 export class PaginationView extends View {
   _parentElement = document.querySelector('.pagination');
-
   addHandlerClick(handler) {
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--inline');
@@ -32,7 +31,6 @@ export class PaginationView extends View {
             </button>
         `;
     }
-
     //Коли ми на останній сторінці і сторінок більше за 1
     if (this._data.currentPage === numPages && numPages > 1) {
       return `<button data-goto=${this._data.currentPage - 1} class="btn--inline pagination__btn--prev">
@@ -47,7 +45,6 @@ export class PaginationView extends View {
     if (this._data.currentPage === numPages && numPages === 1) {
       return ``;
     }
-
     //Коли ми на будь-якій іншій сторінці, окрім першої і сторінок більше за 1
     if (this._data.currentPage > 1 && this._data.currentPage < numPages) {
       return `

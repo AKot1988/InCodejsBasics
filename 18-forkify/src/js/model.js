@@ -43,6 +43,7 @@ export const loadSearchResults = async function () {
         image: rec.image_url,
       };
     });
+    state.search.currentPage = 1;
   } catch (err) {
     console.error(`${err} 💥💥💥`);
     throw err;
