@@ -1,9 +1,9 @@
-7567
+7568
 93E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@msgpackr-extract134151939159017634 1
 106E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\object\proto.js134152832330521857 0
 107E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\workers\src\cpuCount.js134151939168178611 0
 115E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\typed-array\to-sorted.js134152832339869780 0
-67E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist134160614947569341 1
+67E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist134162501590466109 1
 120E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\typed-array\uint32-array.js134152832342229683 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\regenerator-runtime\README.md134151939166831817 0
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\parse-json-string.js134152832330041564 0
@@ -32,7 +32,7 @@
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\set\is-disjoint-from.js134152832323065226 0
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\esnext.global-this.js134152832310562385 0
 107E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.math.cbrt.js134152832307668693 0
-83E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\src\js\controller.js134160614947099444 0
+83E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\src\js\controller.js134162501588943876 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\feature-flags\LICENSE134151939165959015 0
 97E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\browserslist\index.js134151939166883234 0
 99E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\semver\functions\cmp.js134151939166740612 0
@@ -211,7 +211,7 @@
 122E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.typed-array.uint16-array.js134152832309703697 0
 106E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\math\imulh.js134152832319547214 0
 93E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\parcel\lib\bin.js134151939166231911 0
-75E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\src\js\views134160577901532051 1
+75E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\src\js\views134162500900548154 1
 116E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\function\demethodize.js134152832304877045 0
 112E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\esnext.map.update.js134152832311056440 0
 94E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\escalade\readme.md134151939166861836 0
@@ -254,6 +254,7 @@
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\string\trim.js134152832341733912 0
 80E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc134151939159037612 1
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\url\parse.js134152832330091578 0
+92E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\src\js\views\addRecipeView.js134162501298315254 0
 112E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\array\virtual\sort.js134152832335892798 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\esm\_identity.js134151939171239915 0
 99E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\semver\functions\lte.js134151939168598665 0
@@ -340,12 +341,12 @@
 112E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\typed-array\with.js134152832344420851 0
 111E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.symbol.search.js134152832309214018 0
 100E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\baseline-browser-mapping134151939167608336 1
-99E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\core\index.d.ts134151939172962536 0
-121E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\detect-libc\lib134151939167058870 1
-129E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\esnext.uint8-array.set-from-base64.js134152832312197721 0
 107E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\math-trunc.js134152832328182439 0
 110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\typed-array\filter.js134152832313597060 0
 128E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\detect-libc\lib\elf.js134151939166629406 0
+129E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\esnext.uint8-array.set-from-base64.js134152832312197721 0
+99E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\core\index.d.ts134151939172962536 0
+121E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\detect-libc\lib134151939167058870 1
 109E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.object.seal.js134152832308245863 0
 81E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@lmdb134151939159007634 1
 117E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\typed-array\uint8-array.js134152832342269710 0
@@ -515,8 +516,6 @@
 118E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.weak-set.constructor.js134152832309884085 0
 99E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\semver\functions\neq.js134151939168859504 0
 112E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\suppressed-error.js134152832337502149 0
-124E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\src\_initializer_warning_helper.mjs134151939175501185 0
-152E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages-test.cmd134151939183808385 0
 120E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\_\_to_property_key\package.json134151939174158333 0
 95E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\type-fest\base.d.ts134151939167107104 0
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\iterator\flat-map.js134152832315467830 0
@@ -1682,7 +1681,6 @@
 111E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\node-releases\data\release-schedule134151939166871795 1
 129E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\array-buffer\transfer-to-fixed-length.js134152832340860446 0
 133E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\node-releases\data\release-schedule\release-schedule.json134151939166903333 0
-110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\instance\starts-with.js134152832336399597 0
 93E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr\index.js134151939167919593 0
 100E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\btoa.js134152832302156751 0
 109E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\data-view\index.js134152832322032775 0
@@ -1785,6 +1783,8 @@
 132E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\detect-libc\lib\process.js134151939167096973 0
 111E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.iterator.find.js134152832307362642 0
 143E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages134151939183788251 0
+124E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\src\_initializer_warning_helper.mjs134151939175501185 0
+152E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages-test.cmd134151939183808385 0
 115E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\typed-array\find-last.js134152832314203722 0
 118E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.weak-map.constructor.js134152832309843594 0
 147E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages.ps1134151939183788251 0
@@ -1884,11 +1884,6 @@
 87E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\web134152832344788953 1
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\to-uint8-clamped.js134152832340643603 0
 101E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr\dist\test.js.map134151939169448328 0
-106E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\array\find-index.js134152832313757932 0
-122E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\typed-array\to-locale-string.js134152832338925824 0
-113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.iterator.filter.js134152832307352546 0
-98E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\compressor-raw134151939166659400 1
-106E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\string\match.js134152832327982129 0
 99E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\transformer-svg134151939166649425 1
 117E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\wbr-element.js134151939182883868 0
 108E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\msgpackr\dist\unpack-no-eval.cjs134151939167303982 0
@@ -2137,7 +2132,7 @@
 110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\iterator\range.js134152832330813944 0
 133E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest3.c134151939170689153 0
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\web.queue-microtask.js134152832343846936 0
-88E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\favicon.8b2f57bf.png134160583710377596 0
+88E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\favicon.8b2f57bf.png134162500949022484 0
 128E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\declarative-shadow-dom.js134151939175338077 0
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.promise.finally.js134152832308373638 0
 133E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest6.c134151939170859612 0
@@ -2608,6 +2603,11 @@
 119E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.string.to-well-formed.js134152832309017762 0
 115E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\typed-array\to-base64.js134152832338197527 0
 117E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.number.to-precision.js134152832307972939 0
+106E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\array\find-index.js134152832313757932 0
+122E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\typed-array\to-locale-string.js134152832338925824 0
+113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.iterator.filter.js134152832307352546 0
+98E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\compressor-raw134151939166659400 1
+106E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\string\match.js134152832327982129 0
 124E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\unhandledrejection.js134151939182228498 0
 117E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\stable\typed-array\to-reversed.js134152832339573844 0
 103E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\string\strike.js134152832336604012 0
@@ -3491,7 +3491,7 @@
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\workers\test\cpuCount.test.js134151939168248689 0
 109E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.promise.any.js134152832308333134 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\string\dedent.js134152832304157528 0
-86E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\icons.0809ef97.svg134160583710785742 0
+86E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\icons.0809ef97.svg134162500949138742 0
 119E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\numeric-range-iterator.js134152832328811346 0
 117E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.promise.constructor.js134152832308363618 0
 110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\modules\es.promise.race.js134152832308383012 0
@@ -4056,7 +4056,7 @@
 126E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\object-property-is-enumerable.js134152832329013769 0
 120E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\object-set-prototype-of.js134152832329046352 0
 102E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\string\blink.js134152832301934985 0
-86E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\icons.21bad73c.svg134160583710795850 0
+86E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\icons.21bad73c.svg134162500949133594 0
 112E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\object-to-array.js134152832329046352 0
 118E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\string\virtual\replace-all.js134152832332099641 0
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\internals\object-to-string.js134152832329056326 0
@@ -4672,7 +4672,7 @@
 92E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\chokidar\LICENSE134151944185950711 0
 115E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\instance\to-well-formed.js134152832340757444 0
 109E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\instance\trim-end.js134152832341065760 0
-85E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\logo.726d37a8.png134160583710711892 0
+85E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\logo.726d37a8.png134162500949477020 0
 110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\instance\trim-left.js134152832341240119 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\instance\trim.js134152832341850057 0
 108E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\full\instance\un-this.js134152832342674958 0
@@ -4956,7 +4956,7 @@
 107E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\regions\EE.js134151939175710593 0
 124E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\string\virtual\code-point-at.js134152832302645657 0
 119E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\string\virtual\fontsize.js134152832316025920 0
-95E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.f7626f62.css.map134160583710528667 0
+95E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.f7626f62.css.map134162500949178097 0
 125E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\string\virtual\is-well-formed.js134152832324280564 0
 118E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\features\string\virtual\italics.js134152832324588671 0
 110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\string\virtual\small.js134152832335214026 0
@@ -5479,6 +5479,7 @@
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\instance\replace-all.js134152832331947861 0
 103E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\instance\sort.js134152832335761406 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\instance\splice.js134152832336056803 0
+110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\instance\starts-with.js134152832336399597 0
 107E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\instance\trim-end.js134152832340961411 0
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\typed-array\subarray.js134152832337110903 0
 108E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\es\instance\trim-left.js134152832341175438 0
@@ -5722,7 +5723,7 @@
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\string\virtual\index.js134152832320538246 0
 100E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\esm\_get.js134151939171229913 0
 116E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\string\virtual\italics.js134152832324538306 0
-91E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.f7626f62.css134160583710483413 0
+91E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.f7626f62.css134162500949133594 0
 135E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\_\_class_private_field_loose_base\package.json134151939172590654 0
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\string\virtual\link.js134152832326594569 0
 116E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\core-js\actual\string\virtual\pad-end.js134152832329489260 0
@@ -6543,7 +6544,7 @@
 115E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@swc\helpers\src\_iterable_to_array.mjs134151939175571101 0
 113E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\svg-css.js134151939181480744 0
 115E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\svg-fonts.js134151939181506316 0
-94E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.4a59a05f.js.map134160614947569341 0
+94E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.4a59a05f.js.map134162501590439782 0
 118E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\svg-fragment.js134151939181525893 0
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\svg-html.js134151939181536253 0
 114E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\caniuse-lite\data\features\template.js134151939181718223 0
@@ -7346,7 +7347,7 @@
 101E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\markdown-ansi\src134151939166418216 1
 102E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\markdown-ansi\test134151939166680529 1
 118E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\markdown-ansi\lib\markdown-ansi.js134151939166181852 0
-78E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\index.html134160583710644465 0
+78E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\index.html134162500949022484 0
 103E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\logger\package.json134151939166953339 0
 110E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\@parcel\logger\test\Logger.test.js134151939166801825 0
 105E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\.bin\baseline-browser-mapping134151939183778151 0
@@ -7564,5 +7565,5 @@
 87E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\.bin\semver134151939183808385 0
 91E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\.bin\semver.cmd134151939183798320 0
 91E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\node_modules\.bin\semver.ps1134151939183798320 0
-90E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.4a59a05f.js134160614947533521 0
+90E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\18-forkify.4a59a05f.js134162501590393820 0
 86E:\Study HTML CSS JS\Udemy_INCode JS\InCodejsBasics\18-forkify\dist\icons.7bd9dd61.svg134152815440843007 0
