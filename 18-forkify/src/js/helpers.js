@@ -7,38 +7,59 @@ const timeout = function (s) {
   });
 };
 
-export const GET_JSON = async function (url, id) {
+export const AJAX = async function (url, uploadData = undefined) {
   try {
-    const res = await Promise.race([
-      fetch(id ? `${url}${id}` : url),
-      timeout(TIMEOUT_SEC),
-    ]);
-    const data = await res.json();
-    if (!res.ok) {
-      throw new Error(`${data.message} (${res.status})`);
-    }
-    return data;
-  } catch (err) {
-    throw err;
-  }
-};
+    const fetchPro = uploadData
+      ? fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(uploadData),
+        })
+      : fetch(url);
 
-export const SEND_JSON = async function (url, uploadData) {
-  try {
-    const fetchPro = fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(uploadData),
-    });
     const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
     const data = await res.json();
     if (!res.ok) {
       throw new Error(`${data.message} (${res.status})`);
     }
     return data;
-  } catch (err) {
-    throw err;
-  }
+  } catch (err) {}
 };
+
+// export const GET_JSON = async function (url, id) {
+//   try {
+//     const res = await Promise.race([
+//       fetch(id ? `${url}${id}` : url),
+//       timeout(TIMEOUT_SEC),
+//     ]);
+//     const data = await res.json();
+//     if (!res.ok) {
+//       throw new Error(`${data.message} (${res.status})`);
+//     }
+//     return data;
+//   } catch (err) {
+//     throw err;
+//   }
+// };
+
+// export const SEND_JSON = async function (url, uploadData) {
+//   try {
+//     const fetchPro = fetch(url, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(uploadData),
+//     });
+//     const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+//     const data = await res.json();
+//     if (!res.ok) {
+//       throw new Error(`${data.message} (${res.status})`);
+//     }
+//     return data;
+//   } catch (err) {
+//     throw err;
+//   }
+// };
